@@ -58,6 +58,9 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
+  "Add detection of Pro*C which is very similar to ESQL-C
+  autocmd BufNewFile,BufRead *.pc set filetype=esqlc
+
   " LaTeX-suite stuff
   let g:tex_flavor='latex'
   let g:Tex_ViewRule_pdf = 'Preview'
@@ -88,6 +91,7 @@ if has("autocmd")
   autocmd FileType python setlocal tabstop=3 shiftwidth=3 expandtab
   autocmd FileType c setlocal tabstop=3 shiftwidth=3 expandtab
   autocmd FileType c++ setlocal tabstop=3 shiftwidth=3 expandtab
+  autocmd FileType esqlc setlocal tabstop=3 shiftwidth=3 expandtab
 
   augroup END
 
@@ -127,8 +131,16 @@ function! s:VSetSearch(cmdtype)
   let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
+
 xnoremap <kMultiply> :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
+xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
+
+" recursively vimgrep for word under cursor or selection if you hit leader-star
+nmap <leader>* :execute 'noautocmd vimgrep /\V' . substitute(escape(expand("<cword>"), '\'), '\n', '\\n', 'g') . '/ **'<CR>
+vmap <leader>* :<C-u>call <SID>VSetSearch('/')<CR>:execute 'noautocmd vimgrep /' . @/ . '/ **'<CR>
+nmap <leader><kMultiply> :execute 'noautocmd vimgrep /\V' . substitute(escape(expand("<cword>"), '\'), '\n', '\\n', 'g') . '/ **'<CR>
+vmap <leader><kMultiply> :<C-u>call <SID>VSetSearch('/')<CR>:execute 'noautocmd vimgrep /' . @/ . '/ **'<CR>
 
 "Mute highlight search on Ctrl-l and then do the usual Ctrl-l redraw
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
