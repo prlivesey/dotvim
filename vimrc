@@ -1,4 +1,5 @@
 execute pathogen#infect()
+Helptags
 
 " An example for a vimrc file.
 "
