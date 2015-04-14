@@ -10,6 +10,7 @@
 [submodule "bundle/perl-support"]
 	path = bundle/perl-support
 	url = git://github.com/vim-scripts/perl-support.vim.git
+	ignore = dirty
 [submodule "bundle/latex"]
 	path = bundle/latex
 	url = git://git.code.sf.net/p/vim-latex/vim-latex
