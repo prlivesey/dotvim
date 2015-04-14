@@ -62,6 +62,9 @@ if has("autocmd")
   "Add detection of Pro*C which is very similar to ESQL-C
   autocmd BufNewFile,BufRead *.pc set filetype=esqlc
 
+  " I'll do my own perl file headers, thanks
+  let g:Perl_InsertFileHeader='no'
+
   " LaTeX-suite stuff
   let g:tex_flavor='latex'
   let g:Tex_ViewRule_pdf = 'Preview'
