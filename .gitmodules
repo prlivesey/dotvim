@@ -13,7 +13,7 @@
 	ignore = dirty
 [submodule "bundle/latex"]
 	path = bundle/latex
-	url = git://git.code.sf.net/p/vim-latex/vim-latex
+	url = https://github.com/vim-latex/vim-latex.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git

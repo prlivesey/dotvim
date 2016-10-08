@@ -94,7 +94,7 @@ if has("autocmd")
   autocmd FileType perl setlocal tabstop=3 shiftwidth=3 expandtab
   autocmd FileType python setlocal tabstop=3 shiftwidth=3 expandtab
   autocmd FileType c setlocal tabstop=3 shiftwidth=3 expandtab
-  autocmd FileType cpp setlocal tabstop=3 shiftwidth=3 expandtab
+  autocmd FileType cpp setlocal tabstop=3 shiftwidth=3 expandtab autoindent
   autocmd FileType esqlc setlocal tabstop=3 shiftwidth=3 expandtab
 
   augroup END
