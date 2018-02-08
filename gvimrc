@@ -25,6 +25,14 @@ set mousehide		" Hide the mouse when typing text
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 
+if has('unix')
+  if has('mac')       " osx
+    let g:Tex_ViewRule_pdf = 'open -a Preview' 
+  " else                " linux, bsd, etc
+  endif
+" elseif has('win32') || has('win64')
+endif
+
 " Only do this for Vim version 5.0 and later.
 if version >= 500
 
