@@ -111,7 +111,7 @@ if has("autocmd")
 
   " This is how I like my indenting done
   autocmd FileType perl setlocal tabstop=3 shiftwidth=3 expandtab
-  autocmd FileType python setlocal tabstop=3 shiftwidth=3 expandtab
+  autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
   autocmd FileType c setlocal tabstop=3 shiftwidth=3 expandtab
   autocmd FileType cpp setlocal tabstop=3 shiftwidth=3 expandtab autoindent
   autocmd FileType esqlc setlocal tabstop=3 shiftwidth=3 expandtab
