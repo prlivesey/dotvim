@@ -124,6 +124,9 @@ else
 
 endif " has("autocmd")
 
+" Enable the matchit package
+packadd! matchit
+
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
