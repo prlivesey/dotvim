@@ -1,3 +1,9 @@
+scriptencoding utf-8
+set encoding=utf-8
+
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = [""]
+
 execute pathogen#infect()
 Helptags
 
@@ -126,14 +132,6 @@ endif " has("autocmd")
 
 " Enable the matchit package
 packadd! matchit
-
-" Turn Rainbow Parentheses on for {} and ()
-if &runtimepath =~ 'rainbow_parentheses'
-   au Syntax * RainbowParenthesesLoadRound
-   au Syntax * RainbowParenthesesLoadSquare
-   au Syntax * RainbowParenthesesLoadBraces
-   nmap <leader>r :RainbowParenthesesToggle <CR>
-endif
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
