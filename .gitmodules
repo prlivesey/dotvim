@@ -1,22 +1,22 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
-	url = git://github.com/tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/surround"]
 	path = bundle/surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
-	url = git://github.com/chrisbra/matchit.git
+	url = https://github.com/chrisbra/matchit.git
 [submodule "bundle/perl-support"]
 	path = bundle/perl-support
-	url = git://github.com/vim-scripts/perl-support.vim.git
+	url = https://github.com/vim-scripts/perl-support.vim.git
 	ignore = dirty
 [submodule "bundle/latex"]
 	path = bundle/latex
 	url = https://github.com/vim-latex/vim-latex.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = git://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
